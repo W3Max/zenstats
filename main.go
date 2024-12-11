@@ -8,7 +8,7 @@ import (
 	"os"
 	"os/signal"
 
-	"github.com/dreamsofcode-io/zenstats/internal/app"
+	"github.com/w3max/zenstats/internal/app"
 	"github.com/joho/godotenv"
 )
 

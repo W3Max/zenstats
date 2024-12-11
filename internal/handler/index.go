@@ -8,8 +8,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/dreamsofcode-io/zenstats/internal/quote"
-	"github.com/dreamsofcode-io/zenstats/internal/repository"
+	"github.com/w3max/zenstats/internal/quote"
+	"github.com/w3max/zenstats/internal/repository"
 )
 
 func Page(tmpl *template.Template, name string) http.HandlerFunc {

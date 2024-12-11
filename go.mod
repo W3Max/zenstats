@@ -1,4 +1,4 @@
-module github.com/dreamsofcode-io/zenstats
+module github.com/w3max/zenstats
 
 go 1.23.2
 

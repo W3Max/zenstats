@@ -9,8 +9,8 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/dreamsofcode-io/zenstats/internal/database"
-	"github.com/dreamsofcode-io/zenstats/internal/quote"
+	"github.com/w3max/zenstats/internal/database"
+	"github.com/w3max/zenstats/internal/quote"
 	"github.com/jackc/pgx/v5/pgxpool"
 )
 

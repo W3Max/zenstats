@@ -6,9 +6,9 @@ import (
 	"io/fs"
 	"net/http"
 
-	"github.com/dreamsofcode-io/zenstats/internal/handler"
-	"github.com/dreamsofcode-io/zenstats/internal/middleware"
-	"github.com/dreamsofcode-io/zenstats/internal/repository"
+	"github.com/w3max/zenstats/internal/handler"
+	"github.com/w3max/zenstats/internal/middleware"
+	"github.com/w3max/zenstats/internal/repository"
 )
 
 const index = "GET /{$}"
