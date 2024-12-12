@@ -62,7 +62,7 @@ jobs:
       with:
         name: zenfulstats
         file: docker-stack.yaml
-        host: zenful.site
+        host: casaeureka.ca
         user: deploy
         ssh_key: ${{ secrets.DEPLOY_SSH_PRIVATE_KEY }}
         env_file: ./envfile
