@@ -59,8 +59,7 @@ services:
       update_config:
         order: start-first
     depends_on:
-      db:
-        condition: service_healthy
+      - db
 
   db:
     image: postgres
