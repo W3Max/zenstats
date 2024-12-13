@@ -1,7 +1,7 @@
 services:
 
   web:
-    image: ghcr.io/w3max/zenstats:${GIT_COMMIT_HASH}
+    image: ghcr.io/w3max/zenstats:${GIT_COMMIT_HASH:-latest}
     secrets:
       - db-password
     environment:
