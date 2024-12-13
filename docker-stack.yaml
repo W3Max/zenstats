@@ -34,6 +34,8 @@ services:
       timeout: 2s
       retries: 3
       start_period: 5s
+    deploy:
+      replicas: 1
 
   web:
     image: ghcr.io/w3max/zenstats:${GIT_COMMIT_HASH:-latest}
@@ -53,6 +55,7 @@ services:
       - POSTGRES_PORT=5432
       - POSTGRES_SSLMODE=disable
     deploy:
+      replicas: 2
       update_config:
         order: start-first
     depends_on:
@@ -73,6 +76,8 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+    deploy:
+      replicas: 1
 
 volumes:
   db-data:
