@@ -28,15 +28,8 @@ services:
       - cf_api_token
     environment:
       - CF_DNS_API_TOKEN_FILE=/run/secrets/cf_api_token
-    healthcheck:
-      test: ["CMD", "traefik", "healthcheck", "--ping"]
-      interval: 5s
-      timeout: 2s
-      retries: 3
-      start_period: 5s
     deploy:
       replicas: 1
-
   web:
     image: ghcr.io/w3max/zenstats:${GIT_COMMIT_HASH:-latest}
     labels:
@@ -55,7 +48,7 @@ services:
       - POSTGRES_PORT=5432
       - POSTGRES_SSLMODE=disable
     deploy:
-      replicas: 2
+      replicas: 1
       update_config:
         order: start-first
     depends_on:
