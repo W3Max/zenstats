@@ -1,25 +1,96 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* Enable dark mode */
-html {
-  color-scheme: dark;
-}
-
-/* Custom font */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
-
 body {
-  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #2C2C2C;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  text-align: center;
+  min-height: 100%;
+  /* Allow the body to grow if content overflows */
+  overflow-y: auto;
+  /* Enable scrolling */
 }
 
-/* Subtle animations */
-.fade-in {
-  animation: fadeIn 1s ease-in-out;
+.container {
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  margin: 10px 0;
+}
+
+.logo img {
+  width: auto;
+  max-width: 100%;
+  /* Scale to fit horizontally */
+  height: auto;
+  /* Maintain aspect ratio */
+  max-height: 40vh;
+  /* Limit to 40% of the viewport height */
+  margin: auto;
+  /* Center the image */
+}
+
+.text-below,
+.text-above {
+  margin: 20px 0;
+}
+
+.text-below p,
+.text-above p {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+/* Special Handling for Very Small Screens (Width < 600px or Height < 500px) */
+@media (max-height: 500px) {
+  .container {
+    padding: 10px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 24px;
+    /* Reduce title size */
+    margin-bottom: 15px;
+    /* Decrease spacing below the title */
+  }
+
+  h2 {
+    font-size: 16px;
+    /* Smaller heading font */
+    margin: 5px 0;
+  }
+
+  .logo img {
+    max-height: 25vh;
+    /* Shrink further for very small screens */
+  }
+
+  .text-above,
+  .text-below {
+    margin: 5px 0;
+    /* Reduce vertical spacing */
+  }
 }
